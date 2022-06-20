@@ -1,0 +1,22 @@
+!!! 5
+%html
+
+  %head
+    %meta{charset: "utf-8"}
+    %meta{"http-equiv" => "x-ua-compatible", content:"ie=edge"}
+    %meta{name:"viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no"}
+    %link{:href => "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap", :rel => "stylesheet"}
+    %link{:href => "https://fonts.googleapis.com", :rel => "preconnect"}
+    %link{:crossorigin => "", :href => "https://fonts.gstatic.com", :rel => "preconnect"}
+    
+    %title= current_page.data.title || "Welcome to my homepage"
+    
+    = stylesheet_link_tag "stylesheets/index"
+  
+  %body
+    %main.main
+      = yield
+    
+
+  %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"}
+  = javascript_include_tag "site"

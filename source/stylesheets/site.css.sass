@@ -1,0 +1,80 @@
+@mixin tablet
+  @media (min-width: 481px) { @content; }
+
+
+@mixin desktop-only 
+  @media (min-width: 1024px) { @content; }
+      
+body 
+  background-color: #51A3A3
+  width: 100vw
+  height: 100vh
+  max-height: 100%
+  font-weight: 16px
+  line-height: 100%
+  font-family: "Inter", "Avenir", sans-serif
+  position: relative
+
+.main
+  height: 100%
+  width: 100%
+  position: relative;
+
+.info
+  background-color: white
+  padding: 0.25rem 4rem
+  position: absolute
+  transform: rotate(-35deg)
+  left: -3.5rem
+  top: 3rem
+  color: #75485E
+  font-weight: 700
+
+  @include tablet
+
+
+.intro 
+  position: relative
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: #75485E
+  padding: 1rem
+  min-width: 100%
+  text-align: center
+
+  @include tablet
+    display: inline-block
+    min-width: initial
+
+
+
+
+  .intro-title
+    font-size: 3rem
+    font-weight: 300
+    color: #51A3A3
+    line-height: 100%
+    letter-spacing: -0.03em;
+
+    @include tablet
+      font-size: 4rem
+
+
+
+  .intro-subtitle
+    position: absolute
+    bottom: 0
+    transform: translateY(100%)
+    text-align: center
+    width: 100%
+    padding-top: 1rem
+    line-height: 150%
+    font-weight: 700
+    left: 0
+    font-size: 1rem
+    color: #75485E
+    max-width: 100%
+
+    @include tablet
+      font-size: 1.25rem
